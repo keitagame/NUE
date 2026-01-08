@@ -1,5 +1,5 @@
 # ========================================
-# Unix-like Kernel Makefile
+# keita kernel
 # ========================================
 
 # ツール定義
@@ -8,6 +8,7 @@ LD := ld
 AS := nasm
 OBJCOPY := objcopy
 GRUB_MKRESCUE := grub-mkrescue
+ASM_SOURCES := boot.asm
 
 # ターゲットファイル
 KERNEL_BIN := kernel.bin
@@ -16,7 +17,7 @@ ISO_FILE := os.iso
 
 # ソースファイル
 C_SOURCES := kernel.c
-ASM_SOURCES := 
+
 OBJECTS := $(C_SOURCES:.c=.o) $(ASM_SOURCES:.asm=.o)
 
 # ディレクトリ
